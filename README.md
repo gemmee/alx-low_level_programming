@@ -1,5 +1,5 @@
-# ALX-LOW_LEVEL_PROGRAMMING
-* This repository includes the following directories: *
+## ALX-LOW_LEVEL_PROGRAMMING
+* This repository includes the following directories: 
 
 **0x00. C- Hello, World<br />**
 **0x01. C- Variables, if, else, while<br />**
@@ -9,7 +9,7 @@
 **0x05. C- Pointers, arrays and strings<br />**
 **0x06. C- More pointers, arrays and strings<br />**
 **0x07. C- Even more pointers, arrays and strings<br />**
-**0x08. C- Recursion<br />
+**0x08. C- Recursion<br />**
 **0x09. C- Static libraries<br />**
 **0x0A. C- argc, argv<br />**
 **0x0B. C- malloc, free<br />**
