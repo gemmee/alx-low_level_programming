@@ -3,7 +3,7 @@
  *print_sign - a function that prints the sign of a number.
  *@n: input number
  *
- *Return: 1 and print + if n is positive, 
+ *Return: 1 and print + if n is positive,
  *return 0 and print 0 if n is zero,
  *return -1 and print - if n is negative
  */
