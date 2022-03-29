@@ -1,11 +1,11 @@
 #include "main.h"
 #include "holberton.h"
 /**
- *_isupper - checks if letters are uppercase.
- *@c: input.
+ * _isupper - checks if letters are uppercase
+ * @c: input
  *
- *Return: 1 if c is uppercase
- *0 otherwise.
+ * Return: 1 if c is uppercase
+ * 0 otherwise
  */
 int _isupper(int c)
 {
