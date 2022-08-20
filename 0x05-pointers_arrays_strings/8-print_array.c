@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_array - prints elements of an array, separated by comma, and 
+ * print_array - prints elements of an array, separated by comma, and
  * followed by space, and new line at the end
  * @a: pointer to the array
  * @n: number of elements to be printed
@@ -17,10 +17,9 @@ int i;
 for (i = 0; i < n; i++)
 {
 printf("%d", a[i]);
-if (i != n-1)
+if (i != n - 1)
 printf(", ");
-else
-printf("\n");
 }
+printf("\n");
 }
 
