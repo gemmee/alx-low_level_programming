@@ -16,10 +16,12 @@ while (*s != '\0')
 len++;
 s++;
 }
-while (len != 0)
+s--;
+while (len > 0)
 {
-_putchar(s[len-1]);
+_putchar(*s);
 len--;
+s--;
 }
 _putchar('\n');
 }
