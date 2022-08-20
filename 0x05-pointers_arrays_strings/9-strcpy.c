@@ -5,7 +5,7 @@
  * null byte(\0), to the buffer pointed to by dest.
  * @dest: pointer to the destination.
  * @src: pointer to the source.
- * 
+ *
  * author: Jaba
  * date: Aug 20, 2022, Central Library
  * Return: pointer to dest
