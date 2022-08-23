@@ -4,6 +4,7 @@
   * _memcpy - copies n bytes from memory area src to memory area dest.
   * @dest: pointer to destination string
   * @src: pointer to source string
+  * @n: number of bytes to be copied
   *
   * author: Jaba
   * date: 23-08-2022. Central Library
