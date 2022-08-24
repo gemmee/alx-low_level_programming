@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - prints the product of two numbers, followed by a new line.
@@ -18,6 +19,7 @@ int main(int argc, char *argv[])
 	{
 		for (count = 1; count < argc; count++)
 			product *= atoi(argv[count]);
+
 		printf("%d\n", product);
 	}
 	else
