@@ -3,7 +3,7 @@
 
 /**
   * sum_them_all - a variadic function that returns the sum of all its parameters
-  * @n: first argument
+  * @n: number of arguments to be summed
   *
   * Return: sum of all its arguments
   * Author: Jaba
@@ -11,8 +11,11 @@
   */
 int sum_them_all(const unsigned int n, ...)
 {
-	unsigned int i, sum = 0;
+	unsigned int sum = 0, i;
 	va_list ap;
+
+	if (n == 0)
+		return (0);
 
 	va_start(ap, n);
 
