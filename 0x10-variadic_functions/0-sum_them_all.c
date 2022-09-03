@@ -2,7 +2,8 @@
 #include <stdarg.h>
 
 /**
-  * sum_them_all - a variadic function that returns the sum of all its parameters
+  * sum_them_all - a variadic function that returns the sum of
+  * all its parameters
   * @n: number of arguments to be summed
   *
   * Return: sum of all its arguments
@@ -22,6 +23,7 @@ int sum_them_all(const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		int value = va_arg(ap, unsigned int);
+
 		sum += value;
 	}
 
