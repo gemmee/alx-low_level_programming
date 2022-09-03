@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
-  * print-all - prints anything.
+  * print_all - prints anything.
   * @format: list of all arguments passed to the function.
   *
   * Return: void
@@ -23,7 +23,7 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (format && format[i])
 	{
-		switch(format[i])
+		switch (format[i])
 		{
 		case 'c':
 			printf("%s%c", separator, va_arg(args, int));
