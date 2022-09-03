@@ -3,6 +3,8 @@
  * main - Entry point
  *
  * Return: Always 0 (Success)
+ * Author: Jaba
+ * Date: Sep 03, 2022
  */
 int main(void)
 {
@@ -14,4 +16,3 @@ int main(void)
 
 	return (0);
 }
-
