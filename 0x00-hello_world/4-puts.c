@@ -2,8 +2,10 @@
 
 /**
  * main - Entry point
+ * @void: no arguments
  *
  * Return: Always 0 (Success)
+ * Author: Jaba
  */
 int main(void)
 {
