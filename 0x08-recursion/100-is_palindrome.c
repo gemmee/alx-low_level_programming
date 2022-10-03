@@ -45,7 +45,7 @@ int is_palindrome(char *s)
 	fi = 0;
 	li = _strlen_recursion(s) - 1;
 
-	if(!*s) /* An empty string is considered as palindrome */
+	if (!*s) /* An empty string is considered as palindrome */
 		return (1);
 
 	return (helperFunction(s, fi, li));
