@@ -6,7 +6,7 @@ int findSqrt(int num, int sqrt);
  * @n: number whose square root is computed
  *
  * Return: the value of natural square root of n
- * author: Jaba [not my own code]
+ * author: Jaba [copied the code but understood]
  * date: Aug 23. 2022. kp7c
  */
 
