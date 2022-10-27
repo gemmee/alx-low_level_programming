@@ -7,7 +7,10 @@ Write a function that prints all the elements of a dlistint_t list.
 * Prototype: ```size_t print_dlistint(const dlistint_t *h);```
 * Return: the number of nodes
 * Format: see example
-    ```julien@ubuntu:~/0x17. Doubly linked lists$ cat 0-main.c 
+    
+Hint:
+```
+    julien@ubuntu:~/0x17. Doubly linked lists$ cat 0-main.c 
     #include <stdlib.h>
     #include <string.h>
     #include <stdio.h>
@@ -47,13 +50,18 @@ Write a function that prints all the elements of a dlistint_t list.
     9
     8
     -> 2 elements
-    julien@ubuntu:~/0x17. Doubly linked lists$ ```
+    julien@ubuntu:~/0x17. Doubly linked lists$ 
+```
   
 
 ### __1. List length__
 Write a function that returns the number of elements in a linked dlistint_t list.
 * Prototype: ```size_t dlistint_len(const dlistint_t *h);```
-    ```#include <stdlib.h>
+    
+Hint:
+```
+    julien@ubuntu:~/0x17. Doubly linked lists$ cat 1-main.c 
+    #include <stdlib.h>
     #include <string.h>
     #include <stdio.h>
     #include "lists.h"
@@ -90,12 +98,17 @@ Write a function that returns the number of elements in a linked dlistint_t list
     julien@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-dlistint_len.c -o b
     julien@ubuntu:~/0x17. Doubly linked lists$ ./b 
     -> 2 elements
-    julien@ubuntu:~/0x17. Doubly linked lists$ ```
+    julien@ubuntu:~/0x17. Doubly linked lists$ 
+```
+
 ### __2. Add node__
 Write a function that adds a node at the beginning of a dlistint_t list.
 * Prototype: ```dlistint_t *add_dnodeint(dlistint_t **head, const int n);```
 * Return: the address of the new element, or NULL if it failed
-    ```julien@ubuntu:~/0x17. Doubly linked lists$ cat 2-main.c 
+   
+Hint:
+```
+    julien@ubuntu:~/0x17. Doubly linked lists$ cat 2-main.c 
     #include <stdlib.h>
     #include <string.h>
     #include <stdio.h>
@@ -132,12 +145,17 @@ Write a function that adds a node at the beginning of a dlistint_t list.
     2
     1
     0
-    julien@ubuntu:~/0x17. Doubly linked lists$ ```
+    julien@ubuntu:~/0x17. Doubly linked lists$ 
+```
+
 ### __3. Add node at the end__
 Write a function that adds a new node at the end of a dlistint_t list.
 * Prototype: ```dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);```
 * Return: the address of the new element, or NULL if it failed
-    ```julien@ubuntu:~/0x17. Doubly linked lists$ cat 3-main.c 
+
+Hint:
+```
+    julien@ubuntu:~/0x17. Doubly linked lists$ cat 3-main.c 
     #include <stdlib.h>
     #include <string.h>
     #include <stdio.h>
@@ -174,11 +192,16 @@ Write a function that adds a new node at the end of a dlistint_t list.
     98
     402
     1024
-    julien@ubuntu:~/0x17. Doubly linked lists$ ```
+    julien@ubuntu:~/0x17. Doubly linked lists$ 
+```
+
 ### __4. Free list__
 Write a function that frees a dlistint_t list.
 * Prototype: ```void free_dlistint(dlistint_t *head);```
-    ```julien@ubuntu:~/0x17. Doubly linked lists$ cat 4-main.c
+    
+Hint:
+```
+    julien@ubuntu:~/0x17. Doubly linked lists$ cat 4-main.c
     #include <stdlib.h>
     #include <string.h>
     #include <stdio.h>
@@ -231,13 +254,18 @@ Write a function that frees a dlistint_t list.
     ==4197== 
     ==4197== For counts of detected and suppressed errors, rerun with: -v
     ==4197== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-    julien@ubuntu:~/0x17. Doubly linked lists$ ```
+    julien@ubuntu:~/0x17. Doubly linked lists$ 
+```
+
 ### __5. Get node at index__
 Write a function that returns the nth node of a dlistint_t linked list.
 * Prototype: ```dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);```
 * where ```index``` is the index of the node, starting from ```0```
 * if the node does not exist, return NULL
-    ```julien@ubuntu:~/0x17. Doubly linked lists$ cat 5-main.c
+    
+Hint:
+```
+    julien@ubuntu:~/0x17. Doubly linked lists$ cat 5-main.c
     #include <stdlib.h>
     #include <string.h>
     #include <stdio.h>
@@ -280,12 +308,17 @@ Write a function that returns the nth node of a dlistint_t linked list.
     402
     1024
     98
-    julien@ubuntu:~/0x17. Doubly linked lists$ ```
+    julien@ubuntu:~/0x17. Doubly linked lists$ 
+```
+
 ### __6. Sum list__
 Write a function that returns the sum of all the data(n) of a dlistint_t linked list.
 * Prototype: ```int sum_dlistint(dlistint_t *head);```
 * if the list is empty, return ```0```
-    ```julien@ubuntu:~/0x17. Doubly linked lists$ cat 6-main.c 
+    
+Hint:
+```
+    julien@ubuntu:~/0x17. Doubly linked lists$ cat 6-main.c 
     #include <stdlib.h>
     #include <string.h>
     #include <stdio.h>
@@ -319,7 +352,9 @@ Write a function that returns the sum of all the data(n) of a dlistint_t linked 
     julien@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 6-main.c -std=gnu89 3-add_dnodeint_end.c 4-free_dlistint.c 6-sum_dlistint.c -o i
     julien@ubuntu:~/0x17. Doubly linked lists$ ./i 
     sum = 1534
-    julien@ubuntu:~/0x17. Doubly linked lists$ ```
+    julien@ubuntu:~/0x17. Doubly linked lists$ 
+```
+
 ### __7. Insert at index__
 Write a function that inserts a new node at a given position.
 * Prototype: ```dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);```
@@ -327,7 +362,10 @@ Write a function that inserts a new node at a given position.
 * Returns: the address of the new node, or `NULL` if it failed
 * if it is not possible to add the new node at index `idx`, do not add the new node and return `NULL`
 Your files `2-add_dnodeint.c` and `3-add_dnodeint_end.c` will be compiled during the correction
-    ```julien@ubuntu:~/0x17. Doubly linked lists$ cat 7-main.c
+    
+Hint:
+```
+    julien@ubuntu:~/0x17. Doubly linked lists$ cat 7-main.c
     #include <stdlib.h>
     #include <string.h>
     #include <stdio.h>
@@ -379,14 +417,19 @@ Your files `2-add_dnodeint.c` and `3-add_dnodeint_end.c` will be compiled during
     98
     402
     1024
-    julien@ubuntu:~/0x17. Doubly linked lists$```
+    julien@ubuntu:~/0x17. Doubly linked lists$
+```
+
 ### __8. Delete at index__
 Write a function that deletes the node at index `index` of a `dlistint_t` linked list.
 
 * Prototype: ```int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);```
 * where index is the index of the node that should be deleted. Index starts at `0`
 * Returns: `1` if it succeeded, `-1` if it failed
-    ```julien@ubuntu:~/0x17. Doubly linked lists$ cat 8-main.c
+
+Hint:
+```
+    julien@ubuntu:~/0x17. Doubly linked lists$ cat 8-main.c
     #include <stdlib.h>
     #include <string.h>
     #include <stdio.h>
@@ -510,7 +553,9 @@ Write a function that deletes the node at index `index` of a `dlistint_t` linked
     -----------------
     -----------------
     -----------------
-    julien@ubuntu:~/0x17. Doubly linked lists$ ```
+    julien@ubuntu:~/0x17. Doubly linked lists$ 
+```
+
 ## __`Advanced Tasks`__
 
 ### __9. Crackme4__
@@ -534,9 +579,12 @@ Write a keygen for [crackme5](https://github.com/holbertonschool/0x17.c).
 * Usage for your keygen: `./keygen5 username`
 * Your keygen should print a valid key for the `username`
 
-    ```julien@ubuntu:~/0x17$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 103-keygen.c -o keygen5
+Hint:
+```
+     julien@ubuntu:~/0x17$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 103-keygen.c -o keygen5
     julien@ubuntu:~/0x17$ ./crackme5 julien javascript
     Segmentation fault (core dumped)
     julien@ubuntu:~/0x17$ ./crackme5 julien `./keygen5 julien`
     Congrats!
-    julien@ubuntu:~/0x17$ ```
+    julien@ubuntu:~/0x17$
+```
