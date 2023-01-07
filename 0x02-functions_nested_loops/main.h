@@ -2,7 +2,7 @@
 #define MAIN_H
 /**
  * File: main.h
- * Author: Gamachu Abara
+ * Author: Jeba Abera
  * Description: Header file containing declaration for all functions used 
  */
 int _putchar(char);
@@ -17,5 +17,9 @@ void jack_bauer(void);
 void times_table(void);
 int add(int, int);
 void print_to_98(int n);
+void print_times_table(int n);
+void print_sum_of_multiples_35(void);
+void print_fibonacci_50(void);
+int print_sum_even_fibonacci_4m(void);
 
 #endif
