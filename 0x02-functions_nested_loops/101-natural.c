@@ -21,7 +21,7 @@ void print_sum_of_multiples_35(void)
 		else if (i % 5 == 0)
 			sum += i;
 	}
-	printf("Sum = %d\n", sum);
+	printf("%d\n", sum);
 }
 /**
  * main - check the code
