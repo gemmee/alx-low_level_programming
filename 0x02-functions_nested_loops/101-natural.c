@@ -23,3 +23,13 @@ void print_sum_of_multiples_35(void)
 	}
 	printf("Sum = %d\n", sum);
 }
+/**
+ * main - check the code
+ *
+ * Return: 0 on success
+ */
+int main(void)
+{
+	print_sum_of_multiples_35();
+	return (0);
+}
