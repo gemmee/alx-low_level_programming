@@ -25,4 +25,5 @@ int main(void)
 		a = b - a;
 	}
 	printf("%ld\n", sum);
+	return (0);
 }
