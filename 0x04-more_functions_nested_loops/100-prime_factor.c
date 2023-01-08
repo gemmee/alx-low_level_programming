@@ -1,20 +1,26 @@
 #include <stdio.h>
-/*
- * main - Entry point
- *
- * Return: Always 0
+
+
+/**
+ * main - get biggest prime factor of given number
+ * do it like stack overflow 24166478
+ * no need for sieve
+ * Return: 0
  */
 int main(void)
 {
-	long n, i;
+	long int d, n;
 
 	n = 612852475143;
-	for (i = 2; i < n; i++)
+	for (d = 2; d < n; d++)
 	{
-		while(n % i == 0)
-			n = n / i;
+		if ((n % d) == 0)
+		{
+			n = n / d;
+			d--;
+		}
 	}
-	printf("%lu\n", n);
+	printf("%li\n", n);
 
 	return (0);
 }
