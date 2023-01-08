@@ -81,7 +81,7 @@ int looptheend(int total, char *s, char *code, int *index)
 		{
 			code[*index] = s[i];
 			*index += 1;
-			code [*index] = '\0';
+			code[*index] = '\0';
 			return (0);
 		}
 		i++;
