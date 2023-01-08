@@ -6,19 +6,19 @@
  */
 void print_triangle(int size)
 {
-	int gap, row, tri;
+	int i, j;
 
 	if (size <= 0)
 		_putchar('\n');
 	else
 	{
-		for (row = 0; row < size; row++)
+		for (i = 0; i < size; i++)
 		{
-			for (gap = 0; gap < size - row; gap++)
+			for (j = 0; j < size - i; j++)
 			{
 				_putchar(' ');
 			}
-			for (tri = 0; tri <= row; tri++)
+			for (j = 0; j < i + 1; j++)
 			{
 				_putchar('#');
 			}
