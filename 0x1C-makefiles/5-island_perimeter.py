@@ -16,13 +16,13 @@ def island_perimeter(grid):
     for i in range(len(grid)):
         for j in range(len(grid[i])):
             if grid[i][j]:            # the grid is 1 means it's land
-                if not grid[i - 1][j]:  # upper border is 0 means it's water
+                if i == 0 or not grid[i - 1][j]:
                     perimeter += 1
-                if not grid[i + 1][j]:  # lower border is 0 means it's water
+                if i == len(grid[i]) - 1 or not grid[i + 1][j]:
                     perimeter += 1
-                if not grid[i][j - 1]:  # left border is 0 means it's water
+                if j == 0 or not grid[i][j - 1]:
                     perimeter += 1
-                if not grid[i][j + 1]:  # right border is 0 means it's water
+                if j == len(grid[i]) - 1 or not grid[i][j + 1]:
                     perimeter += 1
 
     return (perimeter)
