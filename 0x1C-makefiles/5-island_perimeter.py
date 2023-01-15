@@ -18,7 +18,7 @@ def island_perimeter(grid):
             if grid[i][j]:            # the grid is 1 means it's land
                 if i == 0 or not grid[i - 1][j]:
                     perimeter += 1
-                if i == len(grid[i]) - 1 or not grid[i + 1][j]:
+                if i == len(grid) - 1 or not grid[i + 1][j]:
                     perimeter += 1
                 if j == 0 or not grid[i][j - 1]:
                     perimeter += 1
