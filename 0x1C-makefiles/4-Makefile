@@ -1,19 +1,36 @@
+# compiler to use
 CC = gcc
+
+# list of source files
 SRC = main.c school.c
+
+# automatically generated list of object files
 OBJ = $(SRC:.c=.o)
+
+# name of executable
 NAME = school
+
+# name of program to delete files
 RM = rm -f
+
+# list of flags
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
+# add dependency to all, no recompile if OBJ not changed
+# omit the flag here, and they will be used only for .o files
 all : $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
+# delete the executable and vi, emacs ~ temporary files
 clean :
 	$(RM) *~ $(NAME)
 
+# delete object files
 oclean :
 	$(RM) $(OBJ)
 
+# deletes all emacs and vim temporary files, the executable and the object files
 fclean : clean oclean
 
+# force recompilation of source files
 re : oclean all
