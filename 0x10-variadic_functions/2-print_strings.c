@@ -8,7 +8,7 @@
   * @n: number of strings.
   *
   * Return: void
-  * Author: Jeba
+  * Author: Gamachu
   * Date: Aug 29 2022 @kp10b
   */
 void print_strings(const char *separator, const unsigned int n, ...)
