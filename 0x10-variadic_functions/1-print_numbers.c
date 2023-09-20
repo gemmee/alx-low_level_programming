@@ -8,7 +8,7 @@
   * @n: number of integers passed to the function.
   *
   * Return: void.
-  * Author: Jeba
+  * Author: Gamachu
   * Date: Aug 29 2022 @kp10 b
   */
 void print_numbers(const char *separator, const unsigned int n, ...)
