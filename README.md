@@ -40,7 +40,7 @@ At the end of this project, you are expected to be a>
 + What are the [logical operators](https://www.freecodecamp.org/news/c-operator-logic-operators-in-c-programming/) (sometimes called boolean operators) and how to use them
 + What are teh [relational operators](https://www.geeksforgeeks.org/operators-in-c-set-2-relational-and-logical-operators/) and how to use them
 + What values are considered __TRUE__ and __FALSE__ in C
-+ How to use the if, if ... else statements
++ How to use the `if`, `if ... else` statements
 + How to use comments
 + How to declare variables of types `char`, `int`, `unsigned int`
 + How to assign values to variables
