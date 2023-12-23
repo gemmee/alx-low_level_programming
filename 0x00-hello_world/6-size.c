@@ -2,8 +2,9 @@
 /**
  * main - entry point
  * @void: no arguments
- * Description: the program starts and ends here.
- * Return: value 0 to exit
+ *
+ * Return: Always 0 (Success)
+ * Author: Gamachu
  */
 int main(void)
 {
