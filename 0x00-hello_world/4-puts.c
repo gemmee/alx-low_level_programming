@@ -5,7 +5,7 @@
  * @void: no arguments
  *
  * Return: Always 0 (Success)
- * Author: Jaba
+ * Author: Gamachu
  */
 int main(void)
 {
