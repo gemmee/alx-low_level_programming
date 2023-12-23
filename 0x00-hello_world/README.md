@@ -1,11 +1,5 @@
 # 0x00.C - Hello, World
 
-### man or help
-+ gcc
-+ printf (3)
-+ puts
-+ putchar
-+ write (2)
 
 ## Requirements
 
@@ -27,14 +21,9 @@
 
 
 
-### Helpful Video Links
-+ Learning to Program in C by [Jonathan Engelsma](https://www.youtube.com/playlist?list=PLkB3phqR3X40reMCBYSoNUPbDvM4kybMs)
-+ Understanding C program Compilation Processby [HowTo](https://www.youtube.com/watch?v=VDslRumKvRA)
+# Mandatory tasks
 
-
-# Mandatory projects
-
-### [0-Preprocesso](./0-preprocessor)
+### [0-Preprocessor](./0-preprocessor)
 
 Write a script that runs a C file through the preprocessor and save the result into another file.
 
@@ -175,7 +164,7 @@ main:
 
 ### [101-quote.c](./101-quote.c)
 
-Write a C program that prints exactly and that piece of art is useful" - Dora Korpar, 2015-10-19, followed by a new line, to the standard error.
+Write a C program that prints exactly `and that piece of art is useful" - Dora Korpar, 2015-10-19`, followed by a new line, to the standard error.
 
 - You are not allowed to use any functions listed in the NAME section of the `man 3 printf` or `man 3 puts`
 - Your program should return `1`
@@ -194,3 +183,21 @@ gamachu@ubuntu:~/alx/allp/0x00$ grep printf < 101-quote.c
 gamachu@ubuntu:~/alx/allp/0x00$ grep put < 101-quote.c
 gamachu@ubuntu:~/alx/allp/0x00$ 
 ```
+
+## Resources
+
+### man or help
++ gcc
++ printf (3)
++ puts
++ putchar
++ write (2)
+
+
+### Helpful Video Links
++ Learning to Program in C by [Jonathan Engelsma](https://www.youtube.com/playlist?list=PLkB3phqR3X40reMCBYSoNUPbDvM4kybMs)
++ Understanding C program Compilation Process by [HowTo](https://www.youtube.com/watch?v=VDslRumKvRA)
+
+--------------------------------------------
+
+Author: Gamachu AD
