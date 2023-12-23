@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+
 /**
  * main - Entry point
  *
  * Return: Always 0 (Success)
- * Author: Jaba
- * Date: Sep. 03 2022 @kP 10b
+ * Author: Gamachu
  */
 int main(void)
 {
