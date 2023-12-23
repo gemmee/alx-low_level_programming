@@ -1,18 +1,20 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  *
  * Return: Always 0 (Success)
- * Author: Jaba
- * Date: Sep 03, 2022
+ * Author: Gamachu
+ * Description: It prints the alphabet in lowercase,
+ *              followed by a new line
  */
 int main(void)
 {
-	int a;
+	char a;
 
-	for (a = 97; a < 123; a++)
+	for (a = 'a'; a <= 'z'; a++)
 		putchar(a);
-	putchar(10);
+	putchar('\n');
 
 	return (0);
 }
