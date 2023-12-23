@@ -59,157 +59,173 @@ Write a program that prints the alphabet in lowercase, followed by a new line.
 
 ### [3-print_alphabets](/3-print_alphabets)
 
-Write a script that compiles a C file and creates an executable named cisfun.
 
-- The C file name will be saved in the variable `$CFILE`
+Write a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.
 
-### [4-puts.c](./4-puts.c)
-
-Write a C program that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
-
-- Use the function `puts`
-- You are not allowed to use `printf`
-- Your program should end with the value `0`
-
-### [5-printf.c](./5-printf.c)
-
-Write a C program that prints exactly `with proper grammar, but the outcome is a piece of art,`, followed by a new line.
-
-- Use the function printf
-- You are not allowed to use the function `puts`
-- Your program should return `0`
-- Your program should compile without warning when using the `-Wall` gcc option
-
-### [6-size.c](./6-size.c)
-
-Write a C program that prints the size of various types on the computer it is compiled and run on.
-
-- You should produce the exact same output as in the example
-- Warnings are allowed
-- Your program should return `0`
-- You might have to install the package `libc6-dev-i386` on your Linux to test the `-m32` `gcc` option
-
+	- You can only use the `putchar` function (every other function (printf, puts, etc…) is forbidden)
+	- All your code should be in the main function
+	- You can only use `putchar` three times in your code
 ```
-gamachu@ubuntu:~/c/0x00$ gcc 6-size.c -m32 -o size32 2> /tmp/32
-gamachu@ubuntu:~/c/0x00$ gcc 6-size.c -m64 -o size64 2> /tmp/64
-gamachu@ubuntu:~/c/0x00$ ./size32
-Size of a char: 1 byte(s)
-Size of an int: 4 byte(s)
-Size of a long int: 4 byte(s)
-Size of a long long int: 8 byte(s)
-Size of a float: 4 byte(s)
-gamachu@ubuntu:~/c/0x00$ ./size64
-Size of a char: 1 byte(s)
-Size of an int: 4 byte(s)
-Size of a long int: 8 byte(s)
-Size of a long long int: 8 byte(s)
-Size of a float: 4 byte(s)
-gamachu@ubuntu:~/c/0x00$ echo $?
-0
-gamachu@ubuntu:~/c/0x00$ 
+gamachu@ubuntu:~/alx/allp/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-print_alphabet.c -o 2-print_alphabet
+gamachu@ubuntu:~/alx/allp/0x01$ ./2-print_alphabet 
+abcdefghijklmnopqrstuvwxyz
+gamachu@ubuntu:~/alx/allp/0x01$
 ```
 
-## Optional tasks
 
-### [100-intel](./100-intel)
+### [4-print_alphabt.c](./4-print_alphabt.c)
 
-Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file.
+Write a program that prints the alphabet in lowercase, followed by a new line.
 
-- The C file name will be saved in the variable `$CFILE`.
-- The output file should be named the same as the C file, but with the extension `.s` instead of `.c`.
+	- Print all the letters except `q` and `e`
+	- You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
+	- All your code should be in the main function
+	- You can only use `putchar` twice in your code
+```
+gamachu@ubuntu:~/alx/allp/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-print_alphabt.c -o 4-print_alphabt
+gamachu@ubuntu:~/alx/allp/0x01$ ./4-print_alphabt 
+abcdfghijklmnoprstuvwxyz
+gamachu@ubuntu:~/alx/allp/0x01$ ./4-print_alphabt | grep [eq]
+gamachu@ubuntu:~/alx/allp/0x01$
+```
+ 
+### [5-print_numbers.c](./5-print_numbers.c)
+
+Write a program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
+
+	- All your code should be in the main function
+
+### [6-print_numberz.c](./6-print_numberz.c)
+
+Write a program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
+
+	- You are not allowed to use any variable of type `char`
+	- You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
+	- You can only use putchar twice in your code
+	- All your code should be in the main function
+
 
 ```
-gamachu@ubuntu:~/alx/allp/0x00$ export CFILE=main.c
-gamachu@ubuntu:~/alx/allp/0x00$ cat main.c
-#include <stdio.h>
-
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-    return (0);
-}
-gamachu@ubuntu:~/alx/allp/0x00$ ./100-intel 
-gamachu@ubuntu:~/alx/allp/0x00$ cat main.s
-        .file   "main.c"
-        .intel_syntax noprefix
-        .text
-        .globl  main
-        .type   main, @function
-main:
-.LFB0:
-        .cfi_startproc
-        endbr64
-        push    rbp
-        .cfi_def_cfa_offset 16
-        .cfi_offset 6, -16
-        mov     rbp, rsp
-        .cfi_def_cfa_register 6
-        mov     eax, 0
-        pop     rbp
-        .cfi_def_cfa 7, 8
-        ret
-        .cfi_endproc
-.LFE0:
-        .size   main, .-main
-        .ident  "GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0"
-        .section        .note.GNU-stack,"",@progbits
-        .section        .note.gnu.property,"a"
-        .align 8
-        .long    1f - 0f
-        .long    4f - 1f
-        .long    5
-0:
-        .string  "GNU"
-1:
-        .align 8
-        .long    0xc0000002
-        .long    3f - 2f
-2:
-        .long    0x3
-3:
-        .align 8
-4:
+gamachu@ubuntu:~/alx/allp/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 6-print_numberz.c -o 6-print_numberz
+gamachu@ubuntu:~/alx/allp/0x01$ ./6-print_numberz
+0123456789
+gamachu@ubuntu:~/alx/allp/0x01$
 ```
 
-### [101-quote.c](./101-quote.c)
+### [7-print_tebahpla.c](7-print_tebahpla.c)
 
-Write a C program that prints exactly `and that piece of art is useful" - Dora Korpar, 2015-10-19`, followed by a new line, to the standard error.
+Write a program that prints the lowercase alphabet in reverse, followed by a new line.
 
-- You are not allowed to use any functions listed in the NAME section of the `man 3 printf` or `man 3 puts`
-- Your program should return `1`
-- Your program should compile without any warnings when using the `-Wall gcc` option
+	- You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
+	- All your code should be in the main function
+	- You can only use putchar twice in your code
 
+### [8-print_base16.c](8-print_base16.c)
+
+Write a program that prints all the numbers of base 16 in lowercase, followed by a new line.
+
+	- You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
+	- All your code should be in the main function
+	- You can only use putchar three times in your code
 ```
-gamachu@ubuntu:~/alx/allp/0x00$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -o quote 101-quote.c
-gamachu@ubuntu:~/alx/allp/0x00$ ./quote
-and that piece of art is useful" - Dora Korpar, 2015-10-19
-gamachu@ubuntu:~/alx/allp/0x00$ echo $?
-1
-gamachu@ubuntu:~/alx/allp/0x00$ ./quote 2> q
-gamachu@ubuntu:~/alx/allp/0x00$ cat q
-and that piece of art is useful" - Dora Korpar, 2015-10-19
-gamachu@ubuntu:~/alx/allp/0x00$ grep printf < 101-quote.c
-gamachu@ubuntu:~/alx/allp/0x00$ grep put < 101-quote.c
-gamachu@ubuntu:~/alx/allp/0x00$ 
+gamachu@ubuntu:~/alx/allp/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 8-print_base16.c -o 8-print_base16
+gamachu@ubuntu:~/alx/allp/0x01$ ./8-print_base16
+0123456789abcdef
+gamachu@ubuntu:~/alx/allp/0x01$
 ```
 
+
+### [9-print_comb.c](9-print_comb.c)
+
+Write a program that prints all possible combinations of single-digit numbers.
+
+	- Numbers must be separated by `,`, followed by a space
+	- Numbers should be printed in ascending order
+	- You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
+	- All your code should be in the main function
+	- You can only use putchar four times maximum in your code
+	- You are not allowed to use any variable of type char
+```
+gamachu@ubuntu:~/alx/allp/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 9-print_comb.c -o 9-print_comb
+gamachu@ubuntu:~/alx/allp/0x01$ ./9-print_comb | cat -e
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9$
+gamachu@ubuntu:~/alx/allp/0x01$ 
+```
+
+## Optional tasks (*advanced)
+
+
+### [100-print_comb3.c](./100-print_comb3.c)
+
+Write a program that prints all possible different combinations of two digits.
+
+	- Numbers must be separated by `,`, followed by a space
+	- The two digits must be different
+	- `01` and `10` are considered the same combination of the two digits 0 and 1
+	- Print only the smallest combination of two digits
+	- Numbers should be printed in ascending order, with two digits
+	- You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
+	- You can only use putchar five times maximum in your code
+	- You are not allowed to use any variable of type char
+	- All your code should be in the main function
+```
+gamachu@ubuntu:~/alx/allp/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-print_comb3.c -o 100-print_comb3
+gamachu@ubuntu:~/alx/allp/0x01$ ./100-print_comb3
+01, 02, 03, 04, 05, 06, 07, 08, 09, 12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 34, 35, 36, 37, 38, 39, 45, 46, 47, 48, 49, 56, 57, 58, 59, 67, 68, 69, 78, 79, 89
+gamachu@ubuntu:~/alx/allp/0x01$ 
+```
+
+
+### [101-print_comb4.c](./101-print_comb4.c)
+
+Write a program that prints all possible different combinations of three digits.
+
+	- Numbers must be separated by `,`, followed by a space
+	- The three digits must be different
+	- `012`, `120`, `102`, `021`, `201`, `210` are considered the same combination of the three digits 0, 1 and 2
+	- Print only the smallest combination of three digits
+	- Numbers should be printed in ascending order, with three digits
+	- You can only use the `putchar` function (every other function (printf, puts, etc…) is forbidden)
+	- You can only use `putchar` six times maximum in your code
+	- You are not allowed to use any variable of type `char`
+	- All your code should be in the `main` function
+
+### [102-print_comb5.c](102-print_comb5.c)
+
+Write a program that prints all possible combinations of two two-digit numbers.
+
+	- The numbers should range from `0` to `99`
+	- The two numbers should be separated by a space
+	- All numbers should be printed with two digits. `1` should be printed as `01`
+	- The combination of numbers must be separated by comma, followed by a space
+	- The combinations of numbers should be printed in ascending order
+	- `00` `01` and `01` `00` are considered as the same combination of the numbers 0 and 1
+	- You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
+	- You can only use putchar eight times maximum in your code
+	- You are not allowed to use any variable of type char
+	- All your code should be in the main function
+
+--------------------------------------------------
 ## Resources
 
 ### man or help
 + `man 2 time`
-+ `man 3 putchar`
++ `man putchar`
++ `man 3 rand`
 + `man ascii`
-+ `man 
++ `man grep`
++ `man cat`
 
 
-### Helpful Video Links
+### Lectures I found helpful
 + Learning to Program in C by [Jonathan Engelsma](https://www.youtube.com/playlist?list=PLkB3phqR3X40reMCBYSoNUPbDvM4kybMs)
-+ Understanding C program Compilation Process by [HowTo](https://www.youtube.com/watch?v=VDslRumKvRA)
++ C programming by [Stanford University](https://www.youtube.com/playlist?list=PLjn3WmBeabPOUzxcCkzk4jYMGRZMZ6ylF)
++ C Programming Series by [Mike Shah](https://www.youtube.com/playlist?list=PLvv0ScY6vfd8M-Mi_Vyrg7KgISTW3Sklt)
++ C Programming by [Neso Academy](https://www.youtube.com/playlist?list=PLBlnK6fEyqRggZZgYpPMUxdY1CYkZtARR)
++ C Programming Series by [Caleb Curry](https://www.youtube.com/playlist?list=PL_c9BZzLwBRKKqOc9TJz1pP0ASrxLMtp2)
++ Programming in C by [Jenny's Lectures](https://www.youtube.com/playlist?list=PLdo5W4Nhv31a8UcMN9-35ghv8qyFWD9_S)
+
 
 --------------------------------------------
 
-Author: Gamachu AD
+**Author**: Gamachu AD
