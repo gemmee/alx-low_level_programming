@@ -1,5 +1,4 @@
 	.file	"main.c"
-	.intel_syntax noprefix
 	.text
 	.globl	main
 	.type	main, @function
@@ -7,19 +6,19 @@ main:
 .LFB0:
 	.cfi_startproc
 	endbr64
-	push	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
-	mov	rbp, rsp
+	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
-	mov	eax, 0
-	pop	rbp
+	movl	$0, %eax
+	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
 .LFE0:
 	.size	main, .-main
-	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
+	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0"
 	.section	.note.GNU-stack,"",@progbits
 	.section	.note.gnu.property,"a"
 	.align 8
