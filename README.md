@@ -30,7 +30,28 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 
 ### [0x01. C - Variables, if, else, while](./0x01-variables_if_else_while)
 
-### [0x02. C - Functions, nested loops](./0x02-functions_nested_loops)
+#### Learning Objectives
+
+At the end of this project, you are expected to be a>
+
+##### General
+
++ What are the [arithmetic operators](https://www.geeksforgeeks.org/arithmetic-operators-in-c/) and how to use them
++ What are the [logical operators](https://www.freecodecamp.org/news/c-operator-logic-operators-in-c-programming/) (sometimes called boolean operators) and how to use them
++ What are teh [relational operators](https://www.geeksforgeeks.org/operators-in-c-set-2-relational-and-logical-operators/) and how to use them
++ What values are considered __TRUE__ and __FALSE__ in C
++ How to use the if, if ... else statements
++ How to use comments
++ How to declare variables of types `char`, `int`, `unsigned int`
++ How to assign values to variables
++ How to print the values of type `char`, `int`, `unsigned int` with `printf`
++ How to use the `while` loop
++ How to use the variables in the `while` loop
++ How to print variables in using `printf`
++ What is the `ASCII` character set
++ What are important [gcc flags](https://linuxhandbook.com/gcc-flags/) in linux
++ What are the purpose of the `gcc` flags `-m32` and `-m64`
+
 
 ### [0x03. C - More functions, more nested loops](./0x03-more_functions_nested_loops)
 
