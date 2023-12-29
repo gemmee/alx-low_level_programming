@@ -1,18 +1,15 @@
 #include "main.h"
+
 /**
- * print_alphabet - abcd
- * Desc: proints the alphabet in lowercase, followed by a new line
- * Return: void
+ * print_alphabet - prints the alphabet, in lowercase, followed by newline
+ *
+ * Author: Gamachu
  */
 void print_alphabet(void)
 {
-	char alpha[26] = "abcdefghijklmnopqrstuvwxyz";
-	int i;
+	char a = 'a';
 
-	for (i = 0; i < 26; i++)
-		_putchar(alpha[i]);
+	for (; a <= 'z'; a++)
+		_putchar(a);
 	_putchar('\n');
 }
-
-
-
