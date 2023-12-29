@@ -7,7 +7,7 @@
  *
  * Desc: the numbers must be separated by comma, followed by a space
  * and newline at the end
- * Return: void
+ * Author: Gamachu AD
  */
 
 int main(void)

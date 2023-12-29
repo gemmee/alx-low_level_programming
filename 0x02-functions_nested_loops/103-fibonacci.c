@@ -7,7 +7,7 @@
  * whose values do not exceed 4 million.
  * followed by a new line
  *
- * Return: none
+ * Author: Gamachu AD
  */
 
 int main(void)

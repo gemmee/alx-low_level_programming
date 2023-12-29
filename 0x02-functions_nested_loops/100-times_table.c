@@ -4,7 +4,7 @@
  * print_times_table - prints the times table from 0 to n
  * @n: gives the dimension of the times table, must be bewteen 0 and 15
  *
- * Return: void
+ * Author: Gamachu AD
  */
 void print_times_table(int n)
 {

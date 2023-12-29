@@ -5,8 +5,6 @@
 /**
  * main - Entry point, prints the first 98 fibonacci numbers,
  * starting with 1 and 2, followed by a new line.
- * I cut my numbers arbitrarily at 10^7 and deal with them as
- * two separate parts - front and back
  *
  * Return: 0 on success
  */
