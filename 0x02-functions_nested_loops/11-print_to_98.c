@@ -6,7 +6,7 @@
  * followed by a new line
  * @n: starting number
  *
- * Return: void
+ * Author: Gamachu AD
  */
 void print_to_98(int n)
 {
