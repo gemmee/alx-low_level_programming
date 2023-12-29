@@ -1,8 +1,9 @@
 #include "main.h"
+
 /**
- * jack_bauer - a function that prints every minute of the day
- * hr - hour, min - minute
- * Return: void
+ * jack_bauer - prints every minute of 24 hour in hh:mm format
+ *
+ * Author: Gamachu
  */
 void jack_bauer(void)
 {
