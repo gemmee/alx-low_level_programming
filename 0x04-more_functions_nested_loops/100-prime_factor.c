@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-
 /**
- * main - get biggest prime factor of given number
- * do it like stack overflow 24166478
- * no need for sieve
- * Return: 0
+ * main - get biggest prime factor of 612852475143
+ *
+ * Return: Always 0
+ * Author: Gamachu AD
  */
 int main(void)
 {
@@ -15,10 +14,7 @@ int main(void)
 	for (d = 2; d < n; d++)
 	{
 		if ((n % d) == 0)
-		{
-			n = n / d;
-			d--;
-		}
+			n = n / d--;
 	}
 	printf("%li\n", n);
 

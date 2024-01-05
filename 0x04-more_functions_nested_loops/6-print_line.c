@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- * print_line - a function that draws a straight line in the terminal
- * @n: input number of times to print '_'
- * Return: a straight line
+ * print_line -  draws a straight line in the terminal, ended with a \n
+ * @n: the number of times the character _ should be printed
+ * Description: If n is 0 or less, print only \n
+ *
+ * Author: Gamachu AD
  */
 void print_line(int n)
 {
@@ -12,7 +14,7 @@ void print_line(int n)
 		_putchar('_');
 		n--;
 	}
-	if ( n <= 0)
+	if (n <= 0)
 	{
 		_putchar('\n');
 	}

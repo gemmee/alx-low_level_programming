@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * print_square - a function that prints a square, followed by a new line
- * @size: size of both width and length
+ * print_square - prints a square using a character '#', followed by a new line
+ * @size: size of the square
+ * Description: If size is 0 or less, print only a \n
  *
- * Return: a square made of '#'
+ * Author: Gamachu AD
  */
 void print_square(int size)
 {
