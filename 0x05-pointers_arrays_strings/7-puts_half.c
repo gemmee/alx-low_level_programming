@@ -1,34 +1,20 @@
 #include "main.h"
 
 /**
- * puts_half - prints half of a string, followed by a new line
+ * puts_half - prints the second half of a string, followed by a new line,
+ *             if the number of characters is odd, leave the middle one
  * @str: pointer to a string
  *
- * Return: void.
+ * Author: Gamachu ADf
  */
 void puts_half(char *str)
 {
-int i, n;
+	int i, len = 0;
 
-i = 0;
-while (str[i] != '\0')
-{
-i++;
+	while (str[len] != '\0')
+		len++;
+	i = len % 2 ? len / 2 + 1 : len / 2;
+	while (str[i] != '\0')
+		_putchar(str[i++]);
+	_putchar('\n');
 }
-
-if (i % 2 == 0)
-{
-n = i / 2;
-}
-else
-{
-n = (i + 1) / 2;
-}
-while (str[n] != '\0')
-{
-_putchar(str[n]);
-n++;
-}
-_putchar('\n');
-}
-

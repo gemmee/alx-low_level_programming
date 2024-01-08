@@ -4,19 +4,12 @@
  * _puts - prints a string, followed by a new line, to stdout.
  * @str: pointer to string
  *
- * Return: nothing.
+ * Author: Gamachu AD.
  */
 
 void _puts(char *str)
 {
-int i;
-
-i = 0;
-while (*str != '\0')
-{
-_putchar(*str);
-i++;
-str++;
-}
-_putchar('\n');
+	while (*str != '\0')
+		_putchar(*str++);  /* Note that: *str++ is equivalent to *(str++) but since it's post decrement it's ok*/
+	_putchar('\n');
 }

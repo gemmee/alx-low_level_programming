@@ -1,27 +1,23 @@
 #include "main.h"
 
 /**
- * puts2 - prints every other character of a string, followed by a newline
+ * puts2 - prints every other character of a string,
+ *         starting from the first character,
+ *         followed by a newline
  * @str: pointer to a string
  *
- * author: Jaba
- * date: Aug 20, 2022, Central Library
- * Return: void.
+ * Author: Gamachu AD
  */
 
 void puts2(char *str)
 {
-int j;
+	int j = 0;
 
-j = 0;
-while (str[j] != '\0')
-{
-if (j % 2 == 0)
-{
-_putchar(str[j]);
+	while (str[j] != '\0')
+	{
+		if (j % 2 == 0)
+			_putchar(str[j]);
+		j++;
+	}
+	_putchar('\n');
 }
-j++;
-}
-_putchar('\n');
-}
-

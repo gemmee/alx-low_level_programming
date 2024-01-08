@@ -2,32 +2,29 @@
 #include <stdio.h>
 
 /**
- * _atoi - lay man version of atoi()
+ * _atoi - converts a string to an integer (man atoi to learn more).
  * @s: string to convert to integer if possible
  *
- * Return: int, value of 1st number in string
+ * Return: value of 1st number in string
+ * Author: Gamachu AD
  */
 int _atoi(char *s)
 {
-	int countn, i, number;
+	int neg, i, num;
 
-	countn = 0;
-	number = 0;
-
-	i = 0;
+	neg = i = num = 0;
 	while ((s[i] < '0' || s[i] > '9') && s[i] != '\0')
 	{
 		if (s[i] == '-')
-			countn++;
+			neg++;
 		i++;
 	}
 	while (s[i] >= '0' && s[i] <= '9' && s[i] != '\0')
 	{
-		number = 10 * number - (s[i] - '0');
+		num = 10 * num + (s[i] - '0');
 		i++;
 	}
-	if ((countn % 2 == 0) && number != 0)
-		number = -number;
-
-	return (number);
+	if (neg % 2 && num != 0)
+		num = -num;
+	return (num);
 }

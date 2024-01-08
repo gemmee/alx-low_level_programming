@@ -4,26 +4,22 @@
  * rev_string - reverses a given string
  * @s: pointer to a string
  *
- * author: Jaba
- * date: Aug. 20, 2022, Central Library
- * Return: void.
+ * Author: Gamachu AD
  */
 void rev_string(char *s)
 {
-int i, j, temp, len;
+	int i = 0, len = 0;
 
-len = 0;
-while (s[len] != '\0')
-{
-len++;
-}
-j = len - 1;
+	while (s[len++] != '\0')
+		;   /* empty statement */
+	len -= 2;
+	while (i < len)
+	{
+		int temp;
 
-for (i = 0; i < j; i++, j--)
-{
-temp = s[i];
-s[i] =  s[j];
-s[j] = temp;
-}
+		temp = s[i];
+		s[i++] = s[len];
+		s[len--] = temp;
+	}
 }
 
