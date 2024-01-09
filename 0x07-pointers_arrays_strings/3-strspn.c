@@ -7,10 +7,8 @@
  *
  * Return: the number of bytes in the initial segment of s which consist
  * only of the bytes from accept.
- * author: Jaba [not my code, but understood the algorithm]
- * date: 23-08-2022. Central Library
+ * Author: Gamachu AD
  */
-
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i, j, match = 0;
@@ -20,10 +18,8 @@ unsigned int _strspn(char *s, char *accept)
 		if (s[i] != 32) /* check for spaces */
 		{
 			for (j = 0; accept[j] != '\0'; j++)
-			{
 				if (accept[j] == s[i])
 					match += 1; /* increment if match is found */
-			}
 		}
 		else
 		{
@@ -32,5 +28,4 @@ unsigned int _strspn(char *s, char *accept)
 	}
 	return (match);
 }
-
 

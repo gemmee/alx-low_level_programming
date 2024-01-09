@@ -5,10 +5,9 @@
  * @s: pointer to string.
  * @accept: pointer to string to be matched
  *
- * Return: pointer to the byte in s that matches one of the bytes in
- * accept, or NULL if no such byte is found.
- * author: Jaba [borrowed the code]
- * date: 23-08-22. Central Library
+ * Return: pointer to the byte in s that matches one of the bytes in accept,
+ *         NULL if no such byte is found.
+ * Author: Gamachu AD
  */
 char *_strpbrk(char *s, char *accept)
 {
@@ -16,7 +15,6 @@ char *_strpbrk(char *s, char *accept)
 	int i, j;
 
 	p = 0;
-
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; accept[j]; j++)
@@ -28,6 +26,6 @@ char *_strpbrk(char *s, char *accept)
 			}
 		}
 	}
-	return (p);
+	return (p); /* 0 is equivalent to NULL in this case */ 
 }
 

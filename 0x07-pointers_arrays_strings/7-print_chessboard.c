@@ -2,10 +2,9 @@
 
 /**
  * print_chessboard - prints the chessboard.
- * @a: array of pointers
+ * @a: a pointer to array of characters
  *
- * author: Jaba
- * date: 23-08-22. CL
+ * Author: Gamachu AD
  */
 void print_chessboard(char (*a)[8])
 {

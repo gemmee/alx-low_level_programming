@@ -6,7 +6,8 @@
  * @needle: pointer to the substring
  *
  * Return: pointer to the beginning of the located substring,
- * or NULL if the substring is not found.
+ *         NULL if the substring is not found.
+ * Author: Gamachu AD
  */
 
 char *_strstr(char *haystack, char *needle)
@@ -21,13 +22,10 @@ char *_strstr(char *haystack, char *needle)
 			haystack++;
 			n++;
 		}
-
 		if (!*n)
 			return (start);
-
 		haystack = start + 1;
 	}
-	return (0);
+	return (0); /* 0 is equivalent to NULL */
 }
-
 
