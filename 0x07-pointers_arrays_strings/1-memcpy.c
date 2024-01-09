@@ -6,9 +6,8 @@
   * @src: pointer to source string
   * @n: number of bytes to be copied
   *
-  * author: Jaba
-  * date: 23-08-2022. Central Library
   * Return: pointer to destination string
+  * Author: Gamachu AD
   */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
@@ -16,10 +15,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	unsigned int i;
 
 	for (i = 0; i < n; i++)
-	{
 		dest[i] = src[i];
-	}
-
 	return (dest);
 }
 
