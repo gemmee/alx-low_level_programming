@@ -4,10 +4,11 @@
  * _pow_recursion - computes the value of x raised to the power of y.
  * @x: the base
  * @y: the exponent
+ * Hint: man pow
  *
  * Return: the value of x ^ y
- * author:  Jaba
- * date: Aug 23. 2022. kp7c
+ *         -1 if y is negative
+ * Author:  Gamachu AD
  */
 
 int _pow_recursion(int x, int y)
@@ -16,8 +17,6 @@ int _pow_recursion(int x, int y)
 		return (-1);
 	if (y == 0)
 		return (1);
-	if (y == 1)
-		return (x);
 	return (x * _pow_recursion(x, y - 1));
 }
 
