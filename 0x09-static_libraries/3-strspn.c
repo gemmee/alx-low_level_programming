@@ -6,11 +6,9 @@
  * @accept: pointer to substring
  *
  * Return: the number of bytes in the initial segment of s which consist
- * only of the bytes from accept.
- * author: Jaba [not my code, but understood the algorithm]
- * date: 23-08-2022. Central Library
+ *         only of the bytes from accept.
+ * Author: Gamachu AD
  */
-
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i, j, match = 0;
@@ -32,5 +30,4 @@ unsigned int _strspn(char *s, char *accept)
 	}
 	return (match);
 }
-
 

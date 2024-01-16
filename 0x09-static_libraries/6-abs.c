@@ -4,8 +4,8 @@
  * _abs - finds the absolute value of a number
  * @n: input.
  *
- * Return: absolute value.
- * Author: Jaba @Kiit on Oct 03, 2022
+ * Return: the absolute value of n.
+ * Author: Gamachu AD
  */
 
 int _abs(int n)

@@ -7,9 +7,8 @@
   *
   * Description: the function behaves like the standard library fuction strchr.
   * Return: pointer to the first occurrence of the character c in the string,
-  * or NULL if the character is not found.
-  * author: Jaba
-  * date: Aug. 23, 2022. Central Library
+  *         or NULL if the character is not found.
+  * Author: Gamachu AD
   */
 
 char *_strchr(char *s, char c)

@@ -5,7 +5,7 @@
  * @c: input
  *
  * Return: 1 if c is an alphabet, 0 otherwise.
- * Author: Jaba  @Kiit on Oct 03, 2022 in room 21
+ * Author: Gamachu AD
  */
 int _isalpha(int c)
 {
