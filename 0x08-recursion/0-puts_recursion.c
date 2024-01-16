@@ -1,13 +1,12 @@
 #include "main.h"
 
 /**
- * _puts_recursion - prints a string, followed by a newline
+ * _puts_recursion - prints a string, followed by a new line
  * @s: pointer to the string
+ * Hint: man puts
  *
- * author: Jaba
- * date: Aug 23, 2022. kp7c
+ * Author: Gamachu AD
  */
-
 void _puts_recursion(char *s)
 {
 	if (!*s)
