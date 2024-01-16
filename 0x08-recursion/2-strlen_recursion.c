@@ -3,10 +3,10 @@
 /**
  * _strlen_recursion - computes the length of the string
  * @s: pointer to the string
+ * Hint: man strlen
  *
  * Return: the length of the string
- * author: Jaba
- * date: Aug 23, 2022. kp7c
+ * Author: Gamachu AD
  */
 int _strlen_recursion(char *s)
 {
