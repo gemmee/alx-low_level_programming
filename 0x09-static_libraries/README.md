@@ -39,8 +39,9 @@
 ## Tasks
 
 0. `A library is not a luxury but one of the necessities of life` - Henry W Beecher
+
 Create the static library `libmy.a` containing all the functions listed below:
-```json
+```
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
@@ -64,7 +65,7 @@ char *_strstr(char *haystack, char *needle);
 ```
 If you haven't coded all the above functions, create empty ones with the right prototype. Your `main.h` file should at least contain all the prototypes of the above functions.
 
-```json
+```
 gamachu@ubuntu:~/alx$ ar -t libmy.a
  0-isupper.o
 0-memset.o
@@ -164,10 +165,11 @@ gamachu@ubuntu:~/alx$ ./quote
 gamachu@ubuntu:~/alx$
 ```
 
-1. `Without libraries what have we? We have no past and no future`
+1. `Without libraries what have we? We have no past and no future` - Ray Bradbury
+
 Create a script called `create_static_lib.sh` that creates a static library called `liball.a` from all the `.c` files that are in the current directory.
 
-```json
+```
 gamachu@ubuntu:~/alx$ ls *.c
 0-isupper.c  0-strcat.c  1-isdigit.c  1-strncat.c  2-strlen.c   3-islower.c  3-strcmp.c  4-isalpha.c  5-strstr.c  9-strcpy.c  _putchar.c
 0-memset.c   100-atoi.c  1-memcpy.c   2-strchr.c   2-strncpy.c  3-puts.c     3-strspn.c  4-strpbrk.c  6-abs.c
@@ -199,4 +201,4 @@ gamachu@ubuntu:~/alx$
 ```
 
 ---
-`By`: Julien Barbier
+`By`: Gamachu AD
