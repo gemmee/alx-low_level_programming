@@ -3,14 +3,15 @@
 /**
  * factorial - computes the factorial of a given number using recursion
  * @n: the number whose factorial is computed
+ * Hint: Factorial of 0 is 1
  *
  * Return: the factorial of n
- * author: Jaba
- * date: Aug 23. 2022. kp7c
+ *         -1 if n is negative
+ * Author: Gamachu AD
  */
 int factorial(int n)
 {
-	if (n == 1 || n == 0)
+	if (n == 0)
 		return (1);
 	else if (n < 0)
 		return (-1);
