@@ -4,15 +4,14 @@
 
 /**
  * str_concat - concatenates 2 strings.
- * a NULL string is treated as an empty string.
+ *              a NULL string is treated as an empty string.
  * @s1: pointer to string.
  * @s2: pointer to string.
  *
  * Return: pointer to newly allocated memory which
- * has s1, s2, and null byte.
- * NULL on failure.
- * Author: Jaba
- * Date: Aug 28 2022. kp10B
+ *         has s1, followed by s2, and null byte.
+ *         NULL on failure.
+ * Author: Gamachu AD
  */
 char *str_concat(char *s1, char *s2)
 {
@@ -23,35 +22,20 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-
 	len1 = 0;
 	while (s1[len1] != '\0')
 		len1++;
 	len2 = 0;
 	while (s2[len2] != '\0')
 		len2++;
-
 	size = len1 + len2;
-
-	nstr = malloc((sizeof(char) * size) + 1);
-	/*check if malloc was successful */
+	nstr = malloc((sizeof(char) * size) + 1); /* + 1 for '\0' character */
 	if (nstr == NULL)
 		return (NULL);
-	i = 0;
-	while (i < len1)
-	{
+	for (i = 0; i < len1; i++)
 		nstr[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (i <= size)
-	{
+	for (j = 0; j < size; i++, j++)
 		nstr[i] = s2[j];
-		i++;
-		j++;
-	}
+	nstr[i] = '\0';
 	return (nstr);
 }
-
-
-
