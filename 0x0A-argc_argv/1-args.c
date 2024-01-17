@@ -6,8 +6,7 @@
  * @argv: array of size argc.
  *
  * Return: 0 on success.
- * Author: Jaba
- * Date: Aug 24, 2022 at Central Library
+ * Author: Gamachu AD
  */
 
 int main(int argc, char *argv[])

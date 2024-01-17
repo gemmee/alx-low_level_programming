@@ -7,15 +7,13 @@
  * @argv: pointer to the array of size argc, containing arguments passed.
  *
  * Return: 0 on success. 1 on error.
- * Author: Jaba
- * Date: Aug. 25 2022 @KP7c
+ * Author: Gamachu AD
  */
 int main(int argc, char *argv[])
 {
 	int i, j, sum;
 
 	sum = 0;
-
 	if (argc < 2)
 	{
 		printf("0\n");

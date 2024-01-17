@@ -7,8 +7,7 @@
  * @argv: array of size argc, containing all arguments received.
  *
  * Return: 0 on success, 1 on error.
- * Author: Jaba
- * Date: Aug 24 2022. @CL
+ * Author: Gamachu AD
  */
 int main(int argc, char *argv[])
 {
@@ -19,7 +18,6 @@ int main(int argc, char *argv[])
 	{
 		for (count = 1; count < argc; count++)
 			product *= atoi(argv[count]);
-
 		printf("%d\n", product);
 	}
 	else

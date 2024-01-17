@@ -6,7 +6,7 @@
  * @argv: stores arguments passed in the command line
  *
  * Return: 0 on success
- * Author: Jaba
+ * Author: Gamachu AD
  */
 int main(int argc, char *argv[])
 {
