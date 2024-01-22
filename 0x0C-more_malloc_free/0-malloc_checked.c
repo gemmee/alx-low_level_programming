@@ -5,9 +5,7 @@
  * @b: size of memory to be allocated.
  *
  * Return: pointer to allocated memory
- * Author: Jaba
- * Date: Oct 03, 2022 Mon
- * Place: my room 21
+ * Author: Gamachu AD
  */
 
 void *malloc_checked(unsigned int b)
@@ -16,8 +14,5 @@ void *malloc_checked(unsigned int b)
 
 	if (p == NULL)
 		exit(98);
-
 	return (p);
 }
-
-
