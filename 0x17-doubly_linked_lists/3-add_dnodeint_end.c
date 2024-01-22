@@ -6,8 +6,9 @@
  * @head: pointer to the head of the list
  * @n: the element to added
  *
- * Return: the address of the new element, or NULL if it failed
- * Author: Jaba
+ * Return: the address of the new element
+ *         NULL if it failed
+ * Author: Gamachu AD
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
@@ -16,7 +17,6 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	newnode = malloc(sizeof(dlistint_t));
 	if (newnode == NULL)
 		return (NULL);
-
 	newnode->n = n;
 	newnode->next = NULL;
 	ptr = *head;
@@ -31,7 +31,5 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		*head = newnode;
 	}
 	newnode->prev = ptr;
-
 	return (newnode);
 }
-
