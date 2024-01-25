@@ -1,10 +1,11 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
-  *main - prints name of file.
+  * main - prints name of file.
   *
-  *Return: 0.
-  *Author: Jaba
+  * Return: 0.
+  * Author: Gamachu
   */
 int main(void)
 {

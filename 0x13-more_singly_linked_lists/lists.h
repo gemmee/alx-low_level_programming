@@ -11,8 +11,7 @@
   *
   * Description: singly linked list node structure
   * for ALX project
-  * Author: Jaba
-  * Date: Oct 05, 2022 @ kiit room 21
+  * Author: Gamachu Abara
   */
 typedef struct listint_s
 {
