@@ -8,8 +8,6 @@
  * @owner: the owner of the dog
  *
  * Description: a header file for a dog struct
- * Author: Jaba
- * Date: Aug 29, 2022. @kp10B
  */
 struct dog
 {
