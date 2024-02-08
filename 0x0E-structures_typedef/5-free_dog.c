@@ -4,17 +4,14 @@
  * free_dog - frees dogs struct.
  * @d: pointer to dog struct.
  *
- * Return: void.
- * Author: Jaba
- * Date: Aug 29 2022 @KP7B -21 room(2nd F)
+ * Author: Gamachu AD
  */
 void free_dog(dog_t *d)
 {
-	if (d == 0)
+	if (d == NULL)
 		return;
 	free(d->name);
 	free(d->owner);
 	free(d);
-
 }
 
