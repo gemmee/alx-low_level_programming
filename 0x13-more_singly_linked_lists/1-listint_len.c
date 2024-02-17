@@ -5,8 +5,7 @@
  * @h: pointer to the head of the list listint_t
  *
  * Return: the no. of elements
- * Author: Jaba
- * Date: Oct 05, 2022 @kiit my 21 room
+ * Author: Gamachu AD
  */
 
 size_t listint_len(const listint_t *h)
