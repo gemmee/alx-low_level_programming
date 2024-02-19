@@ -4,11 +4,8 @@
  * free_listint - frees a listint_t list.
  * @head: pointer to the first element
  *
- * Return: none
- * Author: Jaba
- * Date: Oct 05, 2022
+ * Author: Gamachu AD
  */
-
 void free_listint(listint_t *head)
 {
 	listint_t *temp;
