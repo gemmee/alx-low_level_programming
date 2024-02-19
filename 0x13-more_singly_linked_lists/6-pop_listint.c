@@ -6,8 +6,8 @@
  * @head: pointer to pointer to first element
  *
  * Return: value of head node or 0 if list is empty
+ * Author: Gamachu AD
  */
-
 int pop_listint(listint_t **head)
 {
 	int removed = 0;
@@ -15,13 +15,10 @@ int pop_listint(listint_t **head)
 
 	if (*head == NULL)
 		return (removed);
-
-	temp = (*head);
+	temp = *head;
 	removed = temp->n;
-
-	/*make head point to the next element*/
+	/* make head point to the next element */
 	*head = (*head)->next;
 	free(temp);
-
 	return (removed);
 }
