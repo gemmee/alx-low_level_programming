@@ -16,6 +16,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *pre, *temp, *node;
 	unsigned int count;
 
+	if (!head)
+		return (NULL);
 	node = malloc(sizeof(listint_t));
 	if (node == NULL)
 		return (NULL);
@@ -27,8 +29,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		count++;
 		temp = temp->next;
 	}
+	/* Handle a case of inserting at an index outside the list */
 	if (idx >= count)
 		return (NULL);
+	/* Handle a case of inserting at beginnig of the list */
 	if (idx == 0)
 	{
 		node->next = *head;
