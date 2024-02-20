@@ -7,46 +7,42 @@
  * @idx: the position of insertion
  * @n: the new element to be inserted
  *
- * Return: address of the new node or NULL if it failed.
+ * Return: address of the new node
+ *         or NULL if it failed.
+ * Author: Gamachu AD
  */
-
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *ptr1, *ptr2;
-	listint_t new_node;
+	listint_t *pre, *temp, *node;
 	unsigned int count;
 
-	new_node = malloc(sizeof(listint_t));
-	if (new_node == NULL)
+	node = malloc(sizeof(listint_t));
+	if (node == NULL)
 		return (NULL);
-	ptr1 = *head;
-	ptr2 = *head;
-	new_node->n = n;
-	new_node->next = NULL;
+	node->n = n;
 	count = 0;
-	while (*head != NULL)
+	temp = *head;
+	while (temp)
 	{
-		*head = (*head)->next;
 		count++;
+		temp = temp->next;
 	}
 	if (idx >= count)
 		return (NULL);
-	count = 0;
-	while (ptr1->next != NULL)
+	if (idx == 0)
 	{
-		if (count == idx)
-		{
-			break;
-		}
-		else
-		{
-			ptr2 = ptr1;
-			ptr1 = ptr1->next;
-			count++;
-		}
+		node->next = *head;
+		*head = node;
 	}
-	ptr2-next = new_node;
-	new_node->next = ptr1;
-	return (new_node)
+	count = 0;
+	temp = *head;
+	while (temp && count < idx)
+	{
+		pre = temp;
+		temp = temp->next;
+		count++;
+	}
+	pre->next = node;
+	node->next = temp;
+	return (node);
 }
-
