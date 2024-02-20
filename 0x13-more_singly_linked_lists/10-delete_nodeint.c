@@ -15,13 +15,13 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *pre, *temp;
 	unsigned int count;
 
-	if (!head || !*head)
+	if (head == NULL || *head == NULL)
 		return (-1);
 	/* Edge case 1: delete the first node */
 	temp = *head;
 	if (index == 0)
 	{
-		*head = (*head)->next;
+		*head = temp->next;
 		free(temp);
 		return (1);
 	}
@@ -32,6 +32,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		pre = temp;
 		temp = temp->next;
 		count++;
+		if (temp == NULL && count < index)
+			return (-1);
 	}
 	/* Edge case 2: delete the last node */
 	if (temp->next == NULL)
