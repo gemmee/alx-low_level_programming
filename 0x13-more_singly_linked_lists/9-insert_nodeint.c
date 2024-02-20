@@ -13,17 +13,13 @@
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *pre, *temp, *node;
+	listint_t *temp, *node;
 	unsigned int count;
 
-	if (!head)
+	if (head == NULL)
 		return (NULL);
-	node = malloc(sizeof(listint_t));
-	if (node == NULL)
-		return (NULL);
-	node->n = n;
-	count = 0;
 	temp = *head;
+	count = 0;
 	while (temp)
 	{
 		count++;
@@ -32,7 +28,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/* Handle a case of inserting at an index outside the list */
 	if (idx >= count)
 		return (NULL);
-	/* Handle a case of inserting at beginnig of the list */
+	node = malloc(sizeof(listint_t));
+	if (node == NULL)
+		return (NULL);
+	node->n = n;
+	/* Handle a case of inserting at beginning of the list */
 	if (idx == 0)
 	{
 		node->next = *head;
@@ -41,13 +41,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	count = 0;
 	temp = *head;
-	while (temp && count < idx)
+	/* Move temp just before the position of insertion */
+	while (temp && count < idx - 1)
 	{
-		pre = temp;
 		temp = temp->next;
 		count++;
 	}
-	pre->next = node;
-	node->next = temp;
+	node->next = temp->next;
+	temp->next = node;
 	return (node);
 }
