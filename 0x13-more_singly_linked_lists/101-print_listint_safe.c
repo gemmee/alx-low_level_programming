@@ -1,7 +1,4 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <stdio.h>
-
 
 /**
  * is_in - checks if an address is in a linked list of pointers
