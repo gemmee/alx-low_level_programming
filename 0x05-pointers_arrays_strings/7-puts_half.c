@@ -5,7 +5,7 @@
  *             if the number of characters is odd, leave the middle one
  * @str: pointer to a string
  *
- * Author: Gamachu ADf
+ * Author: Gamachu AD
  */
 void puts_half(char *str)
 {
