@@ -1,56 +1,31 @@
 #include "main.h"
+#include <limits.h>
 
 /**
- * print_number - prints an integer
- * @n: integer to be printed
+ * print_number - Prints an integer
+ * @n: The integer to print
  *
- * Description: no use of arrays or pointers are allowed
- *              hard-coding special values is not allowed
- *              use of long is not allowed
- *              only use _putchar
- * Return: nothing
  * Author: Gamachu AD
  */
 void print_number(int n)
 {
-	int div, num, neg, rev, rem;
-
-	neg = 0; /*assume n is positive*/
+	/*INT_MIN requires special handling because its */
+	/*absolute value is outside the range of positive integers */
+	/*i.e., it's one more than INT_MAX*/
+	if (n == INT_MIN)
+	{
+		print_number(INT_MIN / 10);
+		_putchar('0' + 8); /*last digit of is 8; INT_MIN = -2 147 483 648 */
+		return;
+	}
 	if (n < 0)
 	{
-		n = -n;
-		neg = 1;
-	}
-	if (n == 0)
-		_putchar(n + '0');
-
-	num = n;
-	div = 1;
-	while (num > 0)
-	{
-		num /= 10;
-		div *= 10;
-	}
-
-	div /= 10;
-	/*reverse the number*/
-	rev = 0;
-	num = n;
-	while (num > 0)
-	{
-		rem = num % 10; /*get the last digit*/
-		rev += rem * div;
-		div /= 10;
-		num /= 10;
-	}
-
-	if (neg)
 		_putchar('-');
-
-	while (rev > 0)
-	{
-		rem = rev % 10; /*get the last digit*/
-		_putchar(rem + '0');
-		rev /= 10;
+		n = -n;
 	}
+
+	if (n / 10 != 0)
+		print_number(n / 10);
+
+	_putchar(n % 10 + '0');
 }
