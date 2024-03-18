@@ -1,119 +1,69 @@
-#include <time.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <ctype.h>
 
-/**
- * _strlen - lay man version of strlen()
- *@s: pointer to char, string
- * get the length of the string in input
- * Return: length of s
- */
-int _strlen(char *s)
-{
-	int l;
-
-	l = 0;
-	while (*(s++) != '\0')
-		l++;
-
-	return (l);
-}
-
-
-/**
- * randompart - do the 2/3 of the code at random
- * @total: the value our string must get
- * @count: the value our string code has
- * @s: the char values to pick from
- * @code: our password
- * @index: the index to print our new letter to the code to
+/** 
+ * main - generates random valid alphanumeric passwords
  *
- * Return: int the count obtained
+ * Return: 0 on success
+ * Author: Gamachu AD
  */
-int randompart(int total, int count, char *s, char *code, int *index)
-{
-	int total34, r, len;
-
-	len = _strlen(s);
-	total34 = 3 * total / 4;
-	while (count < total34)
-	{
-		r = rand() % len;
-		if (count <= total34)
-		{
-			*(code + *index) = *(s + r);
-			count += *(s + r);
-			*index += 1;
-		}
-
-	}
-	return (count);
-}
-
-
-/**
- * looptheend - greedy approach for the end
- * @total: the value our string must get
- * @s: the char values to pick from
- * @code: our password
- * @index: the index to print our new letter to the code to
- *
- * Return: int the difference obtained, 0 is good, else is bad
- */
-int looptheend(int total, char *s, char *code, int *index)
-{
-	int i, count;
-
-	i = 0;
-
-	while (s[i] != '\0')
-	{
-		if ((total - s[i]) > 0)
-		{
-			code[*index] = s[i];
-			*index += 1;
-			total -= s[i];
-			count = looptheend(total, s, code, index);
-			if (count == 0)
-				return (0);
-		}
-		else if ((total - s[i]) == 0)
-		{
-			code[*index] = s[i];
-			*index += 1;
-			code[*index] = '\0';
-			return (0);
-		}
-		i++;
-	}
-	return (-1);
-}
-
-/**
- * main - entry point
- * Return: 0
- */
-int main(void)
-{
-	int total, count, tmp;
-	int *index;
-	char *s;
-	char code[62];
+int main(void) {
+	int sum, diff, i;
+	char ascii;
+	char *password = NULL;
 
 	srand(time(NULL));
-	s = "zywvutsrqponmlkjohgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA9876543210";
-	total = 2772;
+	sum = 0;
+	i = 0;
+	password = malloc(24); /* 'z'*22 + 'X' + '\0' */
+        /* we need at least 23 character long alphanumeric password:
+	   so I allocated 24 minimum space +1 for null character to end the password 
+           eg. 'zzzzzzzzzzzzzzzzzzzzzX' is one valid password 
+		because it adds to 2772 -> the ascii value of z = 122 and X = 88
+		so 122*22 + 88 = 2772
+	   To arrive at this I used python 2772 // 122 and 2772 % 122 then chr(122)
+	   and chr(88) to get the characters. I also checked which alphanumeric character
+	   has the highest value using ord('z') = 122, ord('Z') = 90 and ord('9') = 57
 
-	tmp = 0; /*tmp is needed for index to work*/
-	index = &tmp;
-
-	count = -1;
-	while (count != 0)
-	{
-		count = randompart(total, 0, s, code, index);
-		count = looptheend(total - count, s, code, index);
+	*/
+	while (sum < 2772) {
+		ascii = (char)(rand() % 128); /* gets ascii between 0 to 127 */
+		
+		if (isalnum(ascii)) {  /* if ascii is alphanumeric then add to password */
+			sum += (int)ascii; 
+			password[i] = ascii;
+			if (i > 22 && sum != 2772) { /* 0 to 22 stores the password */
+				/* Add 1 more byte if the allocated space is full */
+				password = realloc(password, 24 + i - 22);
+				if (password == NULL) {
+					printf("Memory allocation failed\n");
+					return 1;
+				}
+			}
+			i++;
+				
+		}
+		if (sum > 2772 && isalnum(ascii)) 
+		{
+			diff = sum - 2772;
+			ascii -= (char)diff;
+			if (isalnum(ascii)) {
+				sum -= diff;
+				password[--i] = ascii;
+				i++;
+			}
+			else { /* the last ascii is not alphanumeric so reset everything */
+				sum = 0;
+				password = realloc(password, 24);
+				i = 0;
+			}
+		}
 	}
+	password[i] = '\0';
+	printf("%s\n", password);
+	free(password);
 
-	printf("%s", code);
-	return (0);
+	return 0;
 }
