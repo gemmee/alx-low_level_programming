@@ -6,7 +6,7 @@
  * @head: head of the list
  *
  * Return: the sum all elements or 0 if empty
- * Author: Jaba
+ * Author: Gamachu AD
  */
 int sum_dlistint(dlistint_t *head)
 {
