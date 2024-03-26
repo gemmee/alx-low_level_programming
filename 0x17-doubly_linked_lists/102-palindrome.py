@@ -7,11 +7,12 @@ def is_palindrome(n):
 	n = str(n)
 	return n == n[::-1]
 
-n = 100
+n = m = 100
+max = n*m
 while (n <= 999):
 	m = 100
 	while (m <= 999):
-		if is_palindrome(n*m):
+		if is_palindrome(n*m) and n*m > max:
 			max = n*m
 			n_max = n
 			m_max = m
