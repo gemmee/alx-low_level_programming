@@ -6,8 +6,7 @@
  * @argv: argument vector.
  *
  * Return: 0
- * Author: Jeba
- * Date: Jan 18, 2023 Wed.
+ * Author: Gamachu AD
  */
 int main(int argc, char *argv[])
 {
