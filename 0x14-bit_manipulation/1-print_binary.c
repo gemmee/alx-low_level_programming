@@ -1,13 +1,10 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
   * print_binary - print binary representation of a number.
   * @n: decimal number to be printed as binary
   *
-  * Return: void
-  * Author: Jaba
-  * Date: Aug 31, 2022 @KP10B
+  * Author: Gamachu AD
   */
 void print_binary(unsigned long int n)
 {
