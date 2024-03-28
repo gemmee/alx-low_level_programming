@@ -3,34 +3,29 @@
 
 /**
   * binary_to_uint - convert a binary number to an unsigned int
-  * @b: pointer to char string
+  * @b: pointer to binary string (contains '0' and '1' only)
   *
-  * Return: converted decimal number or 0 if 
-  * i)  there is 1 or more chars in the string b that is not 0 or 1. or
-  * ii) b is NULL
-  * Author: Jaba
-  * Date: Aug 31 2022 @KP 10B
+  * Return: converted decimal number or
+  *			0 if b is NULL or there >= 1 invalid chars in the string b
+  * Author: Gamachu AD
   */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int total, power;
+	unsigned int dec, pwr;
 	int len;
 
 	if (b == NULL)
 		return (0);
 
 	for (len = 0; b[len]; len++)
-	{
 		if (b[len] != '0' && b[len] != '1')
 			return (0);
-	}
 
-	for (power = 1, total = 0, len --; len >= 0; len--, power *= 2)
-	{
+	pwr = 1, dec = 0;
+	for (; --len >= 0; pwr *= 2)
 		if (b[len] == '1')
-			total += power;
-	}
+			dec += pwr;
 
-	return (total);
+	return (dec);
 }
 
