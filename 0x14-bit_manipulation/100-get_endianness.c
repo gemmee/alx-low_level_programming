@@ -26,4 +26,5 @@ int get_endianness(void)
 /* `1`. If the system is big-endian, the      */
 /* MSB of `x` will be stored at the lowest    */
 /* memory address, so `*c` will be `0`.       */
-/*------------------------------------------- */     
+/*------------------------------------------- */
+
