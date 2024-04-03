@@ -44,5 +44,9 @@ int main(void)
 	print_name("Gamachu", print_name_as_is);
 	print_name("Gamachu Abara", print_name_uppercase);
 	printf("\n");
+	print_name("I love you", &print_name_as_is);
+	print_name("Hodor", NULL);
+	print_name(NULL, print_name_as_is);
+	print_name(NULL, &print_name_uppercase);
 	return (0);
 }
