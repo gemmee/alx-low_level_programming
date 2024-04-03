@@ -1,42 +1,33 @@
 #include "3-calc.h"
+
 /**
-  * main - check arguments
-  * @argc: argument count
-  * @argv: argument vector.
-  *
-  * Return: error if number of arguments is wrong.
-  * Author: Jaba
-  * Date: Aug 29 2022 @KP 10b
-  */
-int main(int argc, char *argv[])
+ * main - Entry point
+ * @ac: argument count
+ * @av: argument vector
+ *
+ * Return: Always 0 on success.
+ * Author: Gamachu AD
+ */
+int main(int ac, char **av)
 {
-	int a = 0, b = 0, res = 0;
-	char s;
+	int (*fptr)(int, int);
+	int num1, num2, result;
 
-
-	if (argc != 4)
+	if (ac != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	/* check if there's only one operator */
-	if (argv[2][1] != '\0')
+	num1 = atoi(av[1]);
+	num2 = atoi(av[3]);
+	fptr = get_op_func(av[2]);
+	if (fptr == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
+	result = fptr(num1, num2);
+	printf("%d\n", result);
 
-	s = argv[2][0];
-	if (s != '+' && s != '-' && s != '/' && s != '*' && s != '%')
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-	res = (get_op_func(argv[2]))(a, b);
-
-	printf("%d\n", res);
 	return (0);
 }

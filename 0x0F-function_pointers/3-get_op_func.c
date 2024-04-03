@@ -1,14 +1,17 @@
 #include "3-calc.h"
+
 /**
-  * get_op_func - function selects the correct function to perform.
-  * @s: operator user.
-  *
-  * Return: correct function result or NULL if operator is wrong.
-  * Author: Jaba
-  * Date: Aug 29 2022 @KP10b
-  */
+ * get_op_func - selects the correct function to perform the operation asked
+ * @s: the operator passed as argument
+ *
+ * Return: the correct function if s is found
+ * NULL if s does not match
+ *
+ * Author: Gamachu AD
+ */
 int (*get_op_func(char *s))(int, int)
 {
+	int i = 0;
 	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
@@ -17,17 +20,12 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
 
-	i = 0;
-	while (i < 5)
+	while (ops[i].op)
 	{
-		if (s[0] == ops[i].op[0])
-		{
+		if (!strcmp(ops[i].op, s))
 			return (ops[i].f);
-		}
 		i++;
 	}
-	return (NULL);
+	return (NULL); /* means no match is found*/
 }
-
