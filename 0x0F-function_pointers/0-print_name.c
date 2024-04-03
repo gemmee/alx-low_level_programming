@@ -10,6 +10,6 @@
  */
 void print_name(char *name, void (*f)(char *s))
 {
-	if (f)
+	if (f && name)
 		f(name); /* equivalent to (*f)(name); */
 }
