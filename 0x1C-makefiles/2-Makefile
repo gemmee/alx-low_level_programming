@@ -1,0 +1,16 @@
+# Variables
+CC = gcc
+SRC = main.c school.c
+# or 
+# SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+# Rules
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# The following rule can be left out
+# as make will use implicit rules
+%.o: %.c
+	$(CC) -c -o $@ $<
