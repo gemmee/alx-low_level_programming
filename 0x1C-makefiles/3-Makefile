@@ -1,0 +1,25 @@
+# Variables
+CC = gcc
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f 
+
+# Rules
+all: $(OBJ)
+	$(CC) $^ -o $(NAME)
+# The ff implicit rules is used here
+# %.o: %.c
+# 	$(CC) -c -o $@ $<
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: fclean all
+
+.PHONY: all clean oclean fclean re	
