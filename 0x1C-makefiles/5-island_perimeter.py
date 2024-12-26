@@ -33,7 +33,7 @@ def island_perimeter(grid):
                     perimeter += 1
 
                 # Left
-                if c == 0 or gric[r][c - 1] == 0:
+                if c == 0 or grid[r][c - 1] == 0:
                     perimeter += 1
 
                 # Right
