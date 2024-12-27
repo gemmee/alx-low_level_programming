@@ -1,0 +1,21 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+# making the Makefile work even if files with the targets exist by marking them as .PHONY
+.PHONY : all clean oclean fclean re
+
+all : m.h $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# $(RM) is automatically set to rm -f by GNU make
+clean :
+	$(RM) *~ $(NAME)
+
+oclean :
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+re : oclean all
